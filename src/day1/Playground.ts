@@ -12,3 +12,13 @@ export default function playground() {
     console.log(a.x);
 }
 playground();
+
+type myType = {
+    name: "red" | "blue";
+    age: number;
+};
+
+interface myTyp2e {
+    name: "red" | "blue";
+    age: number;
+}
