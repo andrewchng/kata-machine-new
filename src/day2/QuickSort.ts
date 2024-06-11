@@ -16,7 +16,7 @@ function qs(arr: number[], lo: number, hi: number): void {
 
 function parition(arr: number[], lo: number, hi: number): number {
     const pivot = arr[hi];
-    let idx = lo - 1;
+    let idx = lo;
 
     for (let i = lo; i < hi; i++) {
         if (arr[i] <= pivot) {
@@ -27,7 +27,7 @@ function parition(arr: number[], lo: number, hi: number): number {
         }
     }
 
-    idx++;
+    // idx++;
     arr[hi] = arr[idx];
     arr[idx] = pivot;
 
