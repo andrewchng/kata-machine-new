@@ -10,7 +10,7 @@ function qs(arr: number[], lo: number, hi: number) {
 
     qs(arr, pivot + 1, hi)
     qs(arr, lo, pivot - 1)
-}
+}code tu
 
 function partiton(arr: number[], lo: number, hi: number): number {
     const pivot = arr[hi];
