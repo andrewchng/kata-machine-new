@@ -4,3 +4,6 @@ dist
 stats.json
 
 
+.DS_Store
+src/.DS_Store
+.gitignore
