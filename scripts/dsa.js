@@ -315,5 +315,13 @@ module.exports = {
         args: "graph: WeightedAdjacencyMatrix, source: number, needle: number",
         return: "number[] | null",
     },
+
+    SubArraySum: {
+        doc : "Given an array of integers and a number k, find the total number of continuous sub-arrays whose sum equals to k.",
+        type: "fn",
+        fn: "sub_array_sum", 
+        args: "arr: number[], k: number",
+        return: "number",
+    }
 };
 
