@@ -56,6 +56,7 @@ function create_class(name, item) {
 }`);
 }
 
+//TODO: Add a feature to print docs for each function
 function create_function(name, item) {
     const g = item.generic ? item.generic : "";
     fs.writeFileSync(path.join(day_path, `${name}.ts`), `export default function ${item.fn}${g}(${item.args}): ${item.return} {
