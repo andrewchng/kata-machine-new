@@ -43,8 +43,13 @@ function generate_getter(getter) {
 }`
 }
 
+function generate_doc(doc){
+    return `/**\n * ${doc} \n */\n`;
+}
+
 function create_class(name, item) {
-    fs.writeFileSync(path.join(day_path, `${name}.ts`), `export default class ${name}${item.generic || ""} {
+    const doc = item.doc? generate_doc(item.doc): "";
+    fs.writeFileSync(path.join(day_path, `${name}.ts`), `${doc}export default class ${name}${item.generic || ""} {
     ${(item.properties || []).map(generate_property).join("\n    ")}
 
     ${(item.getters || []).map(generate_getter).join("\n    ")}
@@ -56,9 +61,11 @@ function create_class(name, item) {
 }`);
 }
 
+//TODO: Add a feature to print docs for each function
 function create_function(name, item) {
     const g = item.generic ? item.generic : "";
-    fs.writeFileSync(path.join(day_path, `${name}.ts`), `export default function ${item.fn}${g}(${item.args}): ${item.return} {
+    const doc = item.doc? generate_doc(item.doc): "";
+    fs.writeFileSync(path.join(day_path, `${name}.ts`), `${doc}export default function ${item.fn}${g}(${item.args}): ${item.return} {
 
 }`);
 }
