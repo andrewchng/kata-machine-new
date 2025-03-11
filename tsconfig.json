@@ -13,7 +13,7 @@
         "baseUrl": "src",
         "paths": {
             "@code/*": [
-                "day17/*"
+                "day18/*"
             ]
         }
     },
