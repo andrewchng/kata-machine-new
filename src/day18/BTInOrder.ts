@@ -1,15 +1,15 @@
 export default function in_order_search(head: BinaryNode<number>): number[] {
-    const path: number[] = [];
-    walk(head, path);
-    return path;
+    return walk(head, []);
 }
 
-function walk(cur: BinaryNode<number> | null, path: number[]) {
+function walk(cur: BinaryNode<number> | null, path: number[]): number[] {
     if (!cur) {
-        return
+        return path;
     }
 
     walk(cur.left, path);
     path.push(cur.value);
     walk(cur.right, path);
+
+    return path;
 }
