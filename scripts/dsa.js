@@ -322,6 +322,22 @@ module.exports = {
         fn: "sub_array_sum", 
         args: "arr: number[], k: number",
         return: "number",
-    }
+    },
+
+    ValidParentheses: {
+        doc: "Given a string containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid. Open brackets must be closed by the same type of brackets in the correct order.",
+        type: "fn",
+        fn: "valid_parentheses",
+        args: "s: string",
+        return: "boolean",
+    },
+
+    LongestSubstring: {
+        doc: "Given a string s, find the length of the longest substring without repeating characters.",
+        type: "fn",
+        fn: "longest_substring",
+        args: "s: string",
+        return: "number",
+    },
 };
 

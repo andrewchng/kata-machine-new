@@ -25,7 +25,9 @@ module.exports = {
         "Map",
         "MinHeap",
         "DijkstraList",
-        "SubArraySum"
+        "SubArraySum",
+        "ValidParentheses",
+        "LongestSubstring"
     ],
 }
 
