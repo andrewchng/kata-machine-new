@@ -3,23 +3,23 @@
  */
 export default function valid_parentheses(s: string): boolean {
     const stack: string[] = [];
-    const paremMap: Record<string, string> = {
+    const parentMap: Record<string, string> = {
         "{": "}",
         "(": ")",
         "[": "]",
     };
 
-    for (let i = 0; i < s.length; i++) {
-        const v = s[i];
-        if (paremMap[v]) {
-            stack.push(v);
-            continue;
-        }
-        const open = stack.pop();
-        if (open === undefined || paremMap[open] !== v) {
-            return false;
-        }
-    }
+    for(let ch of s){
+      if(parentMap[ch]){
+        stack.push(ch)
+        continue;
+      }
+      
+      let open = stack.pop()
+      if(open === undefined || parentMap[open] !== ch){
+        return false
+      }
 
+    }
     return stack.length === 0;
 } 
