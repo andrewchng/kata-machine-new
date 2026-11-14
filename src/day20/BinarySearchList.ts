@@ -14,3 +14,7 @@ export default function bs_list(haystack: number[], needle: number): boolean {
 
     return false;
 }
+
+// Time Complexity = o(log n)
+// how many times can you devide n into 1 =  o(logn)
+// Space Complexity = o(n)
