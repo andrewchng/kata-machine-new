@@ -40,6 +40,10 @@ OUT OF DATE.  We have quite a few more.  need to update
 * Graph with Adjacency List
 * Graph with Adjacency Matrix (untested)
 
+### Practice guides
+
+Interview-style hints and a practice loop for every kata are in [guides/README.md](guides/README.md).
+
 ### How It Works
 
 Make sure you have [Node.js](https://nodejs.org/en/) and yarn installed: `npm install --global yarn`
